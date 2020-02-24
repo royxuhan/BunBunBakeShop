@@ -6,6 +6,15 @@ body {
     font-family: Lucida, sans-serif;
 }
 
+body a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body hr {
+    color: lightgray;
+}
+
 .container {
     height: 60px;
     background-color: #ffffff;
@@ -85,6 +94,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.comingsoon {
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .header .btn {
     position: absolute;
     top: 55%;
@@ -102,4 +119,139 @@ body {
 
 .header .btn:hover {
     background-color: #F4B400;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 2%;
+}
+
+.footer p {
+    color: gray;
+}
+
+.column {
+    float: left;
+    width: 20%;
+}
+
+.format {
+    margin-top: 30px;
+    vertical-align: middle;
+    width: 70%;
+}
+
+.product-description {
+    margin-top: 115px;
+}
+
+.products:after {
+    display: table;
+    clear: both;
+}
+
+.filters {
+    padding: 60px;
+}
+
+.filters h3 {
+    text-decoration: underline;
+}
+
+.filters p {
+    margin-bottom: -8px;
+}
+
+.filters a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+.filter-description {
+    font-size: 14px;
+    padding-top: 75px;
+}
+
+.filter-description p {
+    display: inline;
+}
+
+.pink {
+    text-decoration: underline;
+    color: #D15F81;
+}
+
+.torquise {
+    text-decoration: underline;
+    color: #00AFA0;
+}
+
+.addtocart {
+    margin-top: 60vh;
+    background-color: rgb(238, 204, 109);
+    color: #4285F4;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.learnmore {
+    background-color: rgb(238, 204, 109);
+    color: #4285F4;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.instock {
+    margin-top: 96px;
+    background-color: #1aa260;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 2px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.options {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-color: coral;
+}
+
+.options-selected {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    background-color: #4CAF50;
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-color: coral;
+}
+
+.product-image {
+    margin-top: 100px;
+}
+
+.fill {
+    width: 84%;
+    height: 70vh;
+}
+
+.product-detail {
+    margin-top: 96px;
 }
