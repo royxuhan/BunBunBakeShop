@@ -131,6 +131,9 @@ body hr {
 
 /* coming soon page */
 
+
+/* inspired by W3School: https://www.w3schools.com/howto/howto_css_image_text.asp */
+
 .comingsoon {
     font-size: 48px;
     position: absolute;
@@ -194,12 +197,12 @@ body hr {
 
 .pink {
     text-decoration: underline;
-    color: #D15F81;
+    color: rgb(238, 204, 109);
 }
 
 .torquise {
     text-decoration: underline;
-    color: #00AFA0;
+    color: #4285F4;
 }
 
 .addtocart {
@@ -243,18 +246,17 @@ body hr {
     color: black;
     font-size: 16px;
     padding: 10px 10px;
-    border-color: coral;
+    border-color: #4285F4;
 }
 
 .options-selected {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #ffffff;
-    background-color: #4CAF50;
+    background-color: rgb(238, 204, 109);
     color: black;
     font-size: 16px;
     padding: 10px 10px;
-    border-color: coral;
+    border-color: #4285F4;
 }
 
 .product-image {
