@@ -282,17 +282,37 @@ body hr {
     border-color: #4285F4;
 }
 
-#original.options-selected,
-#blackberry.options-selected,
-#walnut.options-selected,
-#original-gf.options-selected,
-#pumpkin-spice.options-selected,
-#caramel.options-selected,
-#none.options-selected,
-#sugar-milk.options-selected,
-#vanilla-milk.options-selected,
-#chocolate-milk.options-selected,
-.options-selected {
+#original.flavor-selected,
+#blackberry.flavor-selected,
+#walnut.flavor-selected,
+#original-gf.flavor-selected,
+#pumpkin-spice.flavor-selected,
+#caramel.flavor-selected,
+#none.flavor-selected,
+#sugar-milk.flavor-selected,
+#vanilla-milk.flavor-selected,
+#chocolate-milk.flavor-selected,
+.flavor-selected {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(238, 204, 109);
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-color: #4285F4;
+}
+
+#original.glazing-selected,
+#blackberry.glazing-selected,
+#walnut.glazing-selected,
+#original-gf.glazing-selected,
+#pumpkin-spice.glazing-selected,
+#caramel.glazing-selected,
+#none.glazing-selected,
+#sugar-milk.glazing-selected,
+#vanilla-milk.glazing-selected,
+#chocolate-milk.glazing-selected,
+.glazing-selected {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgb(238, 204, 109);
