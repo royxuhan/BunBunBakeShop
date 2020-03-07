@@ -68,7 +68,7 @@
         <div class="column">
             <div class="product-detail">
                 <h2><a href="cinnamon.html">Signature Cinnamon Rolls</a></h2>
-                <p>Price: $3.00 each</p>
+                <p id="item-price">Price: $3.00 each</p>
                 <p>Select Flavor:</p>
                 <button id="original" onclick="selectOption(this.id)">Original</button>
                 <button id="blackberry" onclick="selectOption(this.id)">Blackberry</button>
@@ -85,9 +85,11 @@
                 <button id="vanilla-milk" onclick="selectOption(this.id)">Vanilla-milk</button>
                 <button id="chocolate-milk" onclick="selectOption(this.id)">Chocolate-milk</button>
 
+                <br>
+                <br>
                 <label for="quantity">Quantity:</label>
 
-                <select id="quantity">
+                <select name="quantity" id="quantity" onChange="calculatePrice()">
                     <option value="1">1</option>
                     <option value="3">3</option>
                     <option value="6">6</option>
@@ -97,7 +99,7 @@
                     <option value="27">27</option>
                 </select>
 
-                <p>Total: $27.00</p>
+                <p id="pricing-total">Total: $3.00</p>
             </div>
         </div>
 
@@ -105,7 +107,7 @@
             <button class="instock">In Stock</button>
             <br>
             <form>
-                <button class="addtocart" type="submit" formaction="shoppingcart.html">Add to Cart</button>
+                <button class="addtocart" type="submit" formaction="shoppingcart.html"><b>Add to Cart</b></button>
             </form>
         </div>
     </div>
