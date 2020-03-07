@@ -31,20 +31,40 @@
 
         <!-- Top Navigation Bar-->
         <div class="navbar">
-            <ul>
-                <li><a href="shop.html">Shop</a></li>
+            <ul class="navbar-left">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="shop.html">Order Online</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="navbar-right">
+                <li><a href="shoppingcart.html" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="item-count">0</span></a></li>
             </ul>
         </div>
+
     </div>
 
-    <!-- Header -->
-    <div class="header">
-        <img src="images/header.jpg" class="headerpic" alt="Header Picture" />
-        <b class="comingsoon">Coming Soon!</b>
-    </div>
+    <!-- Cart -->
+    <form name="ShoppingList">
+        <fieldset>
+            <legend>Shopping cart</legend>
+            <label>Item: <input type="text" name="name"></label>
+            <label>Quantity: <input type="text" name="data"></label>
+
+            <input type="button" value="Save" onclick="SaveItem()">
+            <input type="button" value="Update" onclick="ModifyItem()">
+            <input type="button" value="Delete" onclick="RemoveItem()">
+        </fieldset>
+
+        <div id="items_table">
+            <h2>Shopping List</h2>
+            <table id="list"></table>
+            <label><input type="button" value="Clear" onclick="ClearAll()">
+            * Delete all items</label>
+        </div>
+    </form>
 
     <!-- Footer -->
     <div class="footer">

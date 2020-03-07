@@ -5,6 +5,10 @@
 */
 
 
+/* For font awesome icons */
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
 /* document */
 
 html,
@@ -61,14 +65,6 @@ body hr {
     padding: 0 10px;
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: right;
-}
-
 .navbar ul li a {
     text-decoration: none;
     color: #424242;
@@ -84,6 +80,34 @@ body hr {
 .navbar ul li a:hover {
     color: #ffffff;
     background-color: rgba(23, 23, 23, 0.9);
+}
+
+.navbar-left {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.navbar-right {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.item-count {
+    background-color: rgb(99, 149, 248);
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .header {
@@ -270,6 +294,20 @@ body hr {
 
 .product-detail {
     margin-top: 96px;
+}
+
+
+/* shopping cart page */
+
+.shopping-cart {
+    width: 90%;
+    height: 90%;
+    margin: 80px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
 }
 
 
