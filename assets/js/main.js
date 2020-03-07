@@ -32,6 +32,21 @@ function selectGlazingOption(id) {
     }
 }
 
+// Update product heading based on selections
+function updateProductTitle() {
+    var flavor = document.querySelectorAll('.flavor-selected')[0];
+    var flavorText = flavor.innerHTML;
+    document.getElementById("product-title").innerHTML = "Cinnamon Rolls" + "<br />" + "Flavor: " + flavorText;
+    var glazing = document.querySelectorAll('.glazing-selected')[0];
+    if (glazing == null) {
+        var glazingText = "None";
+    } else {
+        var glazingText = glazing.innerHTML;
+    }
+    var oldHTML = document.getElementById("product-title").innerHTML;
+    document.getElementById("product-title").innerHTML = oldHTML + "<br />" + "Glazing: " + glazingText;
+}
+
 // Calculate how much the total is based on item pricing and quantity
 function calculatePrice() {
     var itemPrice = 3;

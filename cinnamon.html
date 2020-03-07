@@ -67,23 +67,23 @@
 
         <div class="column">
             <div class="product-detail">
-                <h2><a href="cinnamon.html">Signature Cinnamon Rolls</a></h2>
+                <h2 id="product-title">Cinnamon Rolls</h2>
                 <p id="item-price">Price: $3.00 each</p>
                 <p>Select Flavor:</p>
-                <button id="original" onclick="selectFlavorOption(this.id)">Original</button>
-                <button id="blackberry" onclick="selectFlavorOption(this.id)">Blackberry</button>
-                <button id="walnut" onclick="selectFlavorOption(this.id)">Walnut</button>
-                <button id="original-gf" onclick="selectFlavorOption(this.id)">Original (GF)</button>
-                <button id="pumpkin-spice" onclick="selectFlavorOption(this.id)">Pumpkin Spice</button>
-                <button id="caramel" onclick="selectFlavorOption(this.id)">Caramel</button>
+                <button id="original" onclick="selectFlavorOption(this.id); updateProductTitle();">Original</button>
+                <button id="blackberry" onclick="selectFlavorOption(this.id); updateProductTitle();">Blackberry</button>
+                <button id="walnut" onclick="selectFlavorOption(this.id); updateProductTitle();">Walnut</button>
+                <button id="original-gf" onclick="selectFlavorOption(this.id); updateProductTitle();">Original (GF)</button>
+                <button id="pumpkin-spice" onclick="selectFlavorOption(this.id); updateProductTitle();">Pumpkin Spice</button>
+                <button id="caramel" onclick="selectFlavorOption(this.id); updateProductTitle();">Caramel</button>
 
                 <br>
 
                 <p>Select Glazing:</p>
-                <button id="none" onclick="selectGlazingOption(this.id)">None</button>
-                <button id="sugar-milk" onclick="selectGlazingOption(this.id)">Sugar-milk</button><br>
-                <button id="vanilla-milk" onclick="selectGlazingOption(this.id)">Vanilla-milk</button>
-                <button id="chocolate-milk" onclick="selectGlazingOption(this.id)">Chocolate-milk</button>
+                <button id="none" onclick="selectGlazingOption(this.id); updateProductTitle();">None</button>
+                <button id="sugar-milk" onclick="selectGlazingOption(this.id); updateProductTitle();">Sugar-milk</button><br>
+                <button id="vanilla-milk" onclick="selectGlazingOption(this.id); updateProductTitle();">Vanilla-milk</button>
+                <button id="chocolate-milk" onclick="selectGlazingOption(this.id); updateProductTitle();">Chocolate-milk</button>
 
                 <br>
                 <br>

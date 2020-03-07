@@ -335,6 +335,10 @@ body hr {
     margin-top: 96px;
 }
 
+.product-detail h2 {
+    font-size: 22px;
+}
+
 .product-detail p {
     font-weight: bold;
 }
