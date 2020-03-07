@@ -69,28 +69,35 @@
             <div class="product-detail">
                 <h2><a href="cinnamon.html">Signature Cinnamon Rolls</a></h2>
                 <p>Price: $3.00 each</p>
-                <br>
-                <p><b>Select Flavor:</b></p>
-                <button class="options">Original</button>
-                <button class="options-selected">Blackberry</button>
-                <button class="options">Walnut</button>
-                <button class="options">Original (GF)</button>
-                <button class="options">Pumpkin Spice</button>
-                <button class="options">Caramel</button>
+                <p>Select Flavor:</p>
+                <button id="original" onclick="selectOption(this.id)">Original</button>
+                <button id="blackberry" onclick="selectOption(this.id)">Blackberry</button>
+                <button id="walnut" onclick="selectOption(this.id)">Walnut</button>
+                <button id="original-gf" onclick="selectOption(this.id)">Original (GF)</button>
+                <button id="pumpkin-spice" onclick="selectOption(this.id)">Pumpkin Spice</button>
+                <button id="caramel" onclick="selectOption(this.id)">Caramel</button>
 
                 <br>
-                <br>
 
-                <p><b>Select Glazing:</b></p>
-                <button class="options">None</button>
-                <button class="options">Sugar-milk</button><br>
-                <button class="options-selected">Vanilla-milk</button>
-                <button class="options">Chocolate-milk</button>
+                <p>Select Glazing:</p>
+                <button id="none" onclick="selectOption(this.id)">None</button>
+                <button id="sugar-milk" onclick="selectOption(this.id)">Sugar-milk</button><br>
+                <button id="vanilla-milk" onclick="selectOption(this.id)">Vanilla-milk</button>
+                <button id="chocolate-milk" onclick="selectOption(this.id)">Chocolate-milk</button>
 
-                <br>
-                <p><b>Quantity: 9</b></p>
-                <br>
-                <p><b>Total: $27.00</b></p>
+                <label for="quantity">Quantity:</label>
+
+                <select id="quantity">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="18">18</option>
+                    <option value="27">27</option>
+                </select>
+
+                <p>Total: $27.00</p>
             </div>
         </div>
 

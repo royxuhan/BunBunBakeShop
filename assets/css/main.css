@@ -254,7 +254,7 @@ body hr {
 /* product detail page */
 
 .instock {
-    margin-top: 96px;
+    margin-top: 100px;
     background-color: #1aa260;
     color: #ffffff;
     font-size: 16px;
@@ -263,7 +263,16 @@ body hr {
     border-radius: 5px;
 }
 
-.options {
+#original,
+#blackberry,
+#walnut,
+#original-gf,
+#pumpkin-spice,
+#caramel,
+#none,
+#sugar-milk,
+#vanilla-milk,
+#chocolate-milk {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #ffffff;
@@ -273,6 +282,16 @@ body hr {
     border-color: #4285F4;
 }
 
+#original.options-selected,
+#blackberry.options-selected,
+#walnut.options-selected,
+#original-gf.options-selected,
+#pumpkin-spice.options-selected,
+#caramel.options-selected,
+#none.options-selected,
+#sugar-milk.options-selected,
+#vanilla-milk.options-selected,
+#chocolate-milk.options-selected,
 .options-selected {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -296,19 +315,16 @@ body hr {
     margin-top: 96px;
 }
 
+.product-detail p {
+    font-weight: bold;
+}
+
+.product-detail label {
+    font-weight: bold;
+}
+
 
 /* shopping cart page */
-
-.shopping-cart {
-    width: 90%;
-    height: 90%;
-    margin: 80px auto;
-    background: #FFFFFF;
-    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-}
 
 
 /* footer */
