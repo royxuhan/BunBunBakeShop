@@ -363,6 +363,12 @@ body hr {
     flex-direction: column;
 }
 
+.cart-image {
+    padding: 20px;
+    height: 20px;
+    width: 20px;
+}
+
 
 /* footer */
 
