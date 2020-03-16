@@ -442,7 +442,7 @@ body hr {
   color: #000000;
 }
 
-label,
+.quantity-label,
 .input {
   padding-left: 20%;
   border-radius: 0;
