@@ -65,3 +65,22 @@ function calculatePrice() {
   document.getElementById("pricing-total").innerHTML =
     "Total: $" + total.toFixed(2);
 }
+
+function updateProductImage(id) {
+  if (id == "blackberry") {
+    console.log("jh");
+    document.getElementById("changing-image").src =
+      "images/cinnamon-blackberry.jpg";
+  } else if (id == "walnut") {
+    document.getElementById("changing-image").src =
+      "images/cinnamon-walnut.jpg";
+  } else if (id == "pumpkin-spice") {
+    document.getElementById("changing-image").src =
+      "images/cinnamon-pumpkinspice.jpg";
+  } else if (id == "caramel") {
+    document.getElementById("changing-image").src =
+      "images/cinnamon-caramel.jpg";
+  } else if (id == "original" || id == "original-gf") {
+    document.getElementById("changing-image").src = "images/cinnamonroll2.png";
+  }
+}

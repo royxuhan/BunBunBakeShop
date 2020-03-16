@@ -73,6 +73,7 @@
       <div class="column">
         <div class="product-image">
           <img
+            id="changing-image"
             src="images/cinnamonroll2.png"
             alt="cinnamon roll picture 2"
             class="fill"
@@ -87,37 +88,37 @@
           <p>Select Flavor:</p>
           <button
             id="original"
-            onclick="selectFlavorOption(this.id); updateProductTitle();"
+            onclick="selectFlavorOption(this.id); updateProductTitle(); updateProductImage(this.id);"
           >
             Original
           </button>
           <button
             id="blackberry"
-            onclick="selectFlavorOption(this.id); updateProductTitle();"
+            onclick="selectFlavorOption(this.id); updateProductTitle(); updateProductImage(this.id);"
           >
             Blackberry
           </button>
           <button
             id="walnut"
-            onclick="selectFlavorOption(this.id); updateProductTitle();"
+            onclick="selectFlavorOption(this.id); updateProductTitle(); updateProductImage(this.id);"
           >
             Walnut
           </button>
           <button
             id="original-gf"
-            onclick="selectFlavorOption(this.id); updateProductTitle();"
+            onclick="selectFlavorOption(this.id); updateProductTitle(); updateProductImage(this.id);"
           >
             Original (GF)
           </button>
           <button
             id="pumpkin-spice"
-            onclick="selectFlavorOption(this.id); updateProductTitle();"
+            onclick="selectFlavorOption(this.id); updateProductTitle(); updateProductImage(this.id);"
           >
             Pumpkin Spice
           </button>
           <button
             id="caramel"
-            onclick="selectFlavorOption(this.id); updateProductTitle();"
+            onclick="selectFlavorOption(this.id); updateProductTitle(); updateProductImage(this.id);"
           >
             Caramel
           </button>
