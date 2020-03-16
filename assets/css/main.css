@@ -4,7 +4,6 @@
 <!-- Spring 2020 --> 
 */
 
-
 /* For font awesome icons */
 
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
@@ -13,254 +12,247 @@
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Lucida, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Lucida, sans-serif;
 }
 
 body a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 body hr {
-    color: lightgray;
+  color: lightgray;
 }
-
 
 /* index page */
 
 .container {
-    height: 60px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding-left: 25px;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 25px;
 }
 
 .logo {
-    max-width: 250px;
-    padding: 0 10px;
-    overflow: hidden;
+  max-width: 250px;
+  padding: 0 10px;
+  overflow: hidden;
 }
 
 .logo a {
-    display: flex;
-    align-items: center;
-    height: 60px;
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 
 .logo a img {
-    max-width: 100%;
-    max-height: 60px;
+  max-width: 100%;
+  max-height: 60px;
 }
-
 
 /* nav bar */
 
 .navbar {
-    display: flex;
-    padding: 0 10px;
+  display: flex;
+  padding: 0 10px;
 }
 
 .navbar ul li a {
-    text-decoration: none;
-    color: #424242;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: block;
-    height: 60px;
-    line-height: 60px;
-    cursor: pointer;
-    padding: 0 10px;
+  text-decoration: none;
+  color: #424242;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  padding: 0 10px;
 }
 
 .navbar ul li a:hover {
-    color: #ffffff;
-    background-color: rgba(23, 23, 23, 0.9);
+  color: #ffffff;
+  background-color: rgba(23, 23, 23, 0.9);
 }
 
 .navbar-left {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: left;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
 }
 
 .navbar-right {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: right;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
 }
 
 .item-count {
-    background-color: rgb(99, 149, 248);
-    border-radius: 10px;
-    color: white;
-    display: inline-block;
-    font-size: 11px;
-    line-height: 1;
-    padding: 3px 7px;
-    text-align: center;
-    vertical-align: middle;
+  background-color: rgb(99, 149, 248);
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .header {
-    position: relative;
-    text-align: center;
-    color: #ffffff;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
 }
 
 .headerpic {
-    width: auto;
-    height: 100%;
-    max-height: 100vh;
-    margin: auto;
-    display: block;
-    margin: auto;
+  width: auto;
+  height: 100%;
+  max-height: 100vh;
+  margin: auto;
+  display: block;
+  margin: auto;
 }
 
 .centered {
-    font-size: 48px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  font-size: 48px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header .btn {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    color: #4285F4;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #4285f4;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .header .btn:hover {
-    background-color: #F4B400;
+  background-color: #f4b400;
 }
 
-
 /* coming soon page */
-
 
 /* inspired by W3School: https://www.w3schools.com/howto/howto_css_image_text.asp */
 
 .comingsoon {
-    font-size: 48px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 /* product browsing page */
 
 .column {
-    float: left;
-    width: 20%;
+  float: left;
+  width: 20%;
 }
 
 .format {
-    margin-top: 30px;
-    vertical-align: middle;
-    width: 70%;
+  margin-top: 30px;
+  vertical-align: middle;
+  width: 70%;
 }
 
 .product-description {
-    margin-top: 115px;
+  margin-top: 115px;
 }
 
 .products:after {
-    display: table;
-    clear: both;
+  display: table;
+  clear: both;
 }
 
 .filters {
-    padding: 60px;
+  padding: 60px;
 }
 
 .filters h3 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .filters p {
-    margin-bottom: -8px;
+  margin-bottom: -8px;
 }
 
 .filters a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .selected {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .filter-description {
-    font-size: 14px;
-    padding-top: 75px;
+  font-size: 14px;
+  padding-top: 75px;
 }
 
 .filter-description p {
-    display: inline;
+  display: inline;
 }
 
 .pink {
-    text-decoration: underline;
-    color: rgb(238, 204, 109);
+  text-decoration: underline;
+  color: rgb(238, 204, 109);
 }
 
 .torquise {
-    text-decoration: underline;
-    color: #4285F4;
+  text-decoration: underline;
+  color: #4285f4;
 }
 
 .addtocart {
-    margin-top: 60vh;
-    background-color: rgb(238, 204, 109);
-    color: #4285F4;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+  margin-top: 60vh;
+  background-color: rgb(238, 204, 109);
+  color: #4285f4;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .learnmore {
-    background-color: rgb(238, 204, 109);
-    color: #4285F4;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: rgb(238, 204, 109);
+  color: #4285f4;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
-
 
 /* product detail page */
 
 .instock {
-    margin-top: 100px;
-    background-color: #1aa260;
-    color: #ffffff;
-    font-size: 16px;
-    padding: 2px 20px;
-    border: none;
-    border-radius: 5px;
+  margin-top: 100px;
+  background-color: #1aa260;
+  color: #ffffff;
+  padding: 2px 20px;
+  border: none;
+  border-radius: 5px;
 }
 
 #original,
@@ -273,13 +265,12 @@ body hr {
 #sugar-milk,
 #vanilla-milk,
 #chocolate-milk {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-    color: black;
-    font-size: 16px;
-    padding: 10px 10px;
-    border-color: #4285F4;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 10px;
+  border-color: #4285f4;
 }
 
 #original.flavor-selected,
@@ -293,13 +284,12 @@ body hr {
 #vanilla-milk.flavor-selected,
 #chocolate-milk.flavor-selected,
 .flavor-selected {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(238, 204, 109);
-    color: black;
-    font-size: 16px;
-    padding: 10px 10px;
-    border-color: #4285F4;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(238, 204, 109);
+  color: black;
+  padding: 10px 10px;
+  border-color: #4285f4;
 }
 
 #original.glazing-selected,
@@ -313,71 +303,72 @@ body hr {
 #vanilla-milk.glazing-selected,
 #chocolate-milk.glazing-selected,
 .glazing-selected {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(238, 204, 109);
-    color: black;
-    font-size: 16px;
-    padding: 10px 10px;
-    border-color: #4285F4;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(238, 204, 109);
+  color: black;
+  padding: 10px 10px;
+  border-color: #4285f4;
 }
 
 .product-image {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .fill {
-    width: 84%;
-    height: 70vh;
+  width: 84%;
+  height: 70vh;
 }
 
 .product-detail {
-    margin-top: 96px;
+  margin-top: 96px;
 }
 
 .product-detail h2 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .product-detail p {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .product-detail label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
+.product-detail button {
+  font-size: 14px;
+}
 
 /* shopping cart page */
 
 .shopping-cart:after {
-    display: table;
-    clear: both;
+  display: table;
+  clear: both;
 }
 
 .cart-title {
-    padding: 30px;
-    margin-left: 30px;
-    font-size: 24px;
-    display: flex;
-    flex-direction: column;
+  padding: 30px;
+  margin-left: 30px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart-image {
-    padding: 20px;
-    height: 20px;
-    width: 20px;
+  padding: 20px;
+  height: 20px;
+  width: 20px;
 }
-
 
 /* footer */
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 2%;
+  position: fixed;
+  bottom: 0;
+  left: 2%;
 }
 
 .footer p {
-    color: gray;
+  color: gray;
 }
