@@ -56,28 +56,82 @@
     <div class="shopping-cart">
       <div class="column">
         <p class="cart-title">Shopping Cart</p>
-        <img
-          src="images/cinnamonroll1.jpg"
-          alt="cinnamon roll picture 1"
-          class="cart-image"
-        />
+
+        <div>
+          <img src="images/dumpling.jpg" alt="dumpling" class="cart-image" />
+        </div>
+
+        <br />
+
+        <div>
+          <img src="images/brownie.jpeg" alt="brownies" class="cart-image" />
+        </div>
       </div>
 
       <div class="column">
-        <div class="cart-title"></div>
+        <div class="cart-description">
+          <h2>Signature Cinnamon Rolls</h2>
+          <p>Blackberry | Vanilla-milk</p>
+        </div>
+        <label class="label" for="itemQty1">Quantity:</label>
+        <div class="add-qty">
+          <select
+            class="input"
+            name="quantity"
+            id="itemQty1"
+            onChange="calculatePrice()"
+          >
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="9" selected>9</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+            <option value="27">27</option>
+          </select>
+        </div>
+
+        <div class="cart-description2">
+          <h2>Apple Dumplings</h2>
+          <p>Original</p>
+        </div>
+        <label class="label" for="itemQty2">Quantity:</label>
+        <div class="add-qty">
+          <select
+            class="input"
+            name="quantity"
+            id="itemQty2"
+            onChange="calculatePrice()"
+          >
+            <option value="1">1</option>
+            <option value="3" selected>3</option>
+            <option value="6">6</option>
+            <option value="9">9</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+            <option value="27">27</option>
+          </select>
+        </div>
       </div>
 
       <div class="column">
-        <p>Column</p>
+        <p></p>
       </div>
 
       <div class="column">
-        <p>Column</p>
+        <div class="cart-price">
+          <p>Price</p>
+        </div>
+        <p class="item-price">$27.00</p>
+        <p class="item-price2">$9.00</p>
+        <p class="item-price2" id="subtotal">
+          Subtotal (2 items): <span id="subtotal-price">$36.00</span>
+        </p>
       </div>
     </div>
 
     <div class="column">
-      <p>Column</p>
+      <p></p>
     </div>
 
     <!-- Footer -->
