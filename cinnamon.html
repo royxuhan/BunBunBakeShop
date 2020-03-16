@@ -45,7 +45,7 @@
           <li>
             <a href="shoppingcart.html" id="cart"
               ><i class="fa fa-shopping-cart"></i> Cart
-              <span class="item-count">0</span></a
+              <span class="item-count" id="item-count">0</span></a
             >
           </li>
         </ul>
@@ -173,11 +173,7 @@
         <button class="instock">In Stock</button>
         <br />
         <form>
-          <button
-            class="addtocart"
-            type="submit"
-            formaction="shoppingcart.html"
-          >
+          <button class="addtocart" type="button" onclick="updateItemCount();">
             <b>Add to Cart</b>
           </button>
         </form>

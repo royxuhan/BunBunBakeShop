@@ -66,9 +66,9 @@ function calculatePrice() {
     "Total: $" + total.toFixed(2);
 }
 
+// Update product image based on selection
 function updateProductImage(id) {
   if (id == "blackberry") {
-    console.log("jh");
     document.getElementById("changing-image").src =
       "images/cinnamon-blackberry.jpg";
   } else if (id == "walnut") {
@@ -83,4 +83,12 @@ function updateProductImage(id) {
   } else if (id == "original" || id == "original-gf") {
     document.getElementById("changing-image").src = "images/cinnamonroll2.png";
   }
+}
+
+// Update item count in the cart
+function updateItemCount() {
+  var itemCount = document.getElementById("item-count");
+  var count = itemCount.innerHTML;
+  count++;
+  itemCount.innerHTML = count;
 }
