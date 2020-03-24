@@ -33,6 +33,56 @@ body hr {
   color: lightgray;
 }
 
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.column {
+  position: relative;
+  width: 100%;
+  padding: 0 15px 0 15px;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 15px;
+}
+
+.horizontal-line {
+  padding-bottom: 15px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.vertical-line-left {
+  border-left: 2px solid #ccc;
+}
+
+.vertical-line-right {
+  border-right: 2px solid #ccc;
+}
+
+.pad-top {
+  padding-top: 20px;
+}
+
 /* index page */
 
 .container {
@@ -83,7 +133,7 @@ body hr {
   height: 60px;
   line-height: 60px;
   cursor: pointer;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .navbar ul li a:hover {
@@ -189,54 +239,60 @@ body hr {
 
 /* product browsing page */
 
-.column {
-  float: left;
-  width: 20%;
+.product-filter-title {
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-bottom: 0px;
+  padding-left: 60px;
 }
 
-.format {
-  margin-top: 30px;
-  vertical-align: middle;
-  width: 70%;
+.product-filter-list {
+  padding-top: 0px;
+  padding-right: 60px;
+  padding-bottom: 0px;
+  padding-left: 60px;
 }
 
-.product-description {
-  margin-top: 115px;
-}
-
-.products:after {
-  display: table;
-  clear: both;
-}
-
-.filters {
-  padding: 60px;
-}
-
-.filters h3 {
+.product-filter-title h2,
+.product-filter-list h2 {
   text-decoration: underline;
 }
 
-.filters p {
+.product-filter-title p,
+.product-filter-list p {
   margin-bottom: -8px;
 }
 
-.filters a {
+.product-filter-title a,
+.product-filter-list a {
   text-decoration: none;
   color: inherit;
 }
 
-.selected {
-  text-decoration: underline;
-}
-
 .filter-description {
-  font-size: 14px;
-  padding-top: 75px;
+  font-size: 16px;
+  padding-top: 88px;
 }
 
 .filter-description p {
   display: inline;
+}
+
+.product-image {
+  vertical-align: middle;
+  margin-top: 20px;
+  max-width: 100%;
+  max-height: 20%;
+  width: 70%;
+  height: auto;
+}
+
+.product-description p {
+  margin-top: -10px;
+}
+
+.selected {
+  text-decoration: underline;
 }
 
 .pink {
@@ -335,10 +391,6 @@ body hr {
   color: black;
   padding: 10px 10px;
   border-color: #4285f4;
-}
-
-.product-image {
-  margin-top: 100px;
 }
 
 .fill {

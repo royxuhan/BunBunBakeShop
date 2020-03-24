@@ -4,6 +4,12 @@
 <!-- Spring 2020 --> 
 */
 
+class Product {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
 // Highlight selected flavor option on product detail page
 function selectFlavorOption(id) {
   var element = document.getElementById(id);
