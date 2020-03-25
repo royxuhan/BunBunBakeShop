@@ -306,7 +306,6 @@ hr {
 }
 
 .addtocart {
-  margin-top: 60vh;
   background-color: rgb(238, 204, 109);
   color: #4285f4;
   font-size: 16px;
@@ -329,7 +328,7 @@ hr {
 /* product detail page */
 
 .instock {
-  margin-top: 100px;
+  margin-top: 20px;
   background-color: #1aa260;
   color: #ffffff;
   padding: 2px 20px;
@@ -393,13 +392,16 @@ hr {
   border-color: #4285f4;
 }
 
-.fill {
-  width: 84%;
-  height: 70vh;
+.product-detail-image {
+  max-width: 100%;
+  width: auto;
+  height: 72vh;
+  margin-left: -20%;
+  padding-bottom: 10%;
 }
 
 .product-detail {
-  margin-top: 96px;
+  margin-top: 15px;
 }
 
 .product-detail h2 {
@@ -558,5 +560,17 @@ hr {
 }
 
 .footer p {
+  padding-top: 50px;
   color: white;
+}
+
+.footer-alt {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+}
+
+.footer-alt p {
+  padding-top: 50px;
+  color: gray;
 }

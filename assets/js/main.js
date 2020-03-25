@@ -38,27 +38,27 @@ function selectGlazingOption(id) {
   }
 }
 
-// Update product heading based on selections
-function updateProductTitle() {
+// Update product selection based on selections
+function updateProductSelection() {
   var flavor = document.querySelectorAll(".flavor-selected")[0];
   var glazing = document.querySelectorAll(".glazing-selected")[0];
 
   if (flavor != null && glazing == null) {
     var flavorText = flavor.innerHTML;
-    document.getElementById("product-title").innerHTML =
-      "Cinnamon Rolls" + "<br />" + "Flavor: " + flavorText;
+    document.getElementById("flavor").innerHTML = "Select Flavor:" + flavorText;
   } else if (glazing != null && flavor == null) {
     var glazingText = glazing.innerHTML;
-    document.getElementById("product-title").innerHTML =
-      "Cinnamon Rolls" + "<br />" + "Glazing: " + glazingText;
+    document.getElementById("glazing").innerHTML =
+      "Select Glazing:" + glazingText;
   } else if (flavor != null && glazing != null) {
     var flavorText = flavor.innerHTML;
     var glazingText = glazing.innerHTML;
-    document.getElementById(
-      "product-title"
-    ).innerHTML = `Cinnamon Rolls<br />Flavor: ${flavorText}<br />Glazing: ${glazingText}`;
+    document.getElementById("flavor").innerHTML = "Select Flavor:" + flavorText;
+    document.getElementById("glazing").innerHTML =
+      "Select Glazing:" + glazingText;
   } else {
-    document.getElementById("product-title").innerHTML = "Cinnamon Rolls";
+    document.getElementById("flavor").innerHTML = "Select Flavor: Original";
+    document.getElementById("glazing").innerHTML = "Select Glazing: None";
   }
 }
 
@@ -86,7 +86,10 @@ function updateProductImage(id) {
   } else if (id == "caramel") {
     document.getElementById("changing-image").src =
       "images/cinnamon-caramel.jpg";
-  } else if (id == "original" || id == "original-gf") {
+  } else if (id == "original") {
+    document.getElementById("changing-image").src =
+      "images/cinnamonrollmain.jpg";
+  } else if (id == "original-gf") {
     document.getElementById("changing-image").src = "images/cinnamonroll2.png";
   }
 }
