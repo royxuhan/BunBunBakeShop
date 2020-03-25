@@ -71,6 +71,11 @@ hr {
   border-bottom: 2px solid #ccc;
 }
 
+.horizontal-line-bot {
+  padding-bottom: -15px;
+  border-bottom: 2px solid #ccc;
+}
+
 .vertical-line-left {
   border-left: 2px solid #ccc;
 }
@@ -81,6 +86,10 @@ hr {
 
 .pad-top {
   padding-top: 20px;
+}
+
+.pad-left {
+  padding-left: 20px;
 }
 
 /* index page */
@@ -328,7 +337,7 @@ hr {
 /* product detail page */
 
 .instock {
-  margin-top: 20px;
+  margin-top: 24px;
   background-color: #1aa260;
   color: #ffffff;
   padding: 2px 20px;
@@ -422,6 +431,11 @@ hr {
 
 /* shopping cart page */
 
+.shopping-cart {
+  margin-top: -35px;
+  margin-bottom: -45px;
+}
+
 .shopping-cart:after {
   display: table;
   clear: both;
@@ -441,10 +455,8 @@ hr {
 }
 
 .cart-price {
-  padding-top: 50px;
+  margin-left: -25%;
   font-size: 20px;
-  display: flex;
-  flex-direction: column;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
@@ -453,33 +465,24 @@ hr {
 }
 
 .item-price {
+  margin-left: -23%;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 33px;
-  color: #eb5757;
-}
-
-.item-price2 {
-  padding-top: 130px;
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 33px;
-  color: #eb5757;
+  font-style: bold;
+  color: #bb2b2b;
 }
 
 .cart-image {
-  padding-left: 20%;
-  height: 20%;
-  width: 80%;
+  margin-top: 20px;
+  padding-left: 24%;
+  height: 20vh;
+  width: 40%;
 }
 
 .cart-description h2 {
-  padding-top: 125px;
-  padding-left: 20%;
   white-space: nowrap;
   font-family: "Work Sans";
   font-style: normal;
@@ -490,30 +493,6 @@ hr {
 }
 
 .cart-description p {
-  padding-left: 20%;
-  white-space: nowrap;
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #000000;
-}
-
-.cart-description2 h2 {
-  padding-top: 45px;
-  padding-left: 20%;
-  white-space: nowrap;
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 33px;
-  color: #6395f8;
-}
-
-.cart-description2 p {
-  padding-left: 20%;
   white-space: nowrap;
   font-family: "Work Sans";
   font-style: normal;
@@ -525,11 +504,13 @@ hr {
 
 .quantity-label,
 .input {
-  padding-left: 20%;
   border-radius: 0;
   display: inline-block;
-  font-family: Raleway, sans-serif;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
+  line-height: 28px;
   vertical-align: middle;
 }
 
@@ -544,11 +525,11 @@ hr {
 
 #subtotal {
   color: #000000;
-  margin-left: -60px;
+  margin-left: -68%;
 }
 
 #subtotal-price {
-  color: #eb5757;
+  color: #bd1212;
 }
 
 /* footer */

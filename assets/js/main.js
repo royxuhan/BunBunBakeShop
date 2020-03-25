@@ -63,13 +63,18 @@ function updateProductSelection() {
 }
 
 // Calculate how much the total is based on item pricing and quantity
-function calculatePrice() {
+function calculatePrice(id) {
   var itemPrice = 3;
-  var quantityForm = document.getElementById("quantity");
-  var numItems = quantityForm.options[quantityForm.selectedIndex].value;
+  var quantity = document.getElementById(id);
+  var numItems = quantity.options[quantity.selectedIndex].value;
   var total = itemPrice * numItems;
-  document.getElementById("pricing-total").innerHTML =
-    "Total: $" + total.toFixed(2);
+  var item = "item-" + id.charAt(id.length - 1);
+  document.getElementById(item).innerHTML = "$" + total.toFixed(2);
+  var subtotal =
+    parseInt(document.getElementById("item-1").innerHTML.substr(1)) +
+    parseInt(document.getElementById("item-2").innerHTML.substr(1));
+  document.getElementById("subtotal-price").innerHTML =
+    "$" + subtotal.toFixed(2);
 }
 
 // Update product image based on selection

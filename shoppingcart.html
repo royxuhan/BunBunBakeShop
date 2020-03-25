@@ -42,7 +42,7 @@
           <li>
             <a href="shoppingcart.html" id="cart"
               ><i class="fa fa-shopping-cart"></i>
-              <span class="item-count">0</span></a
+              <span class="item-count" id="item-count">0</span></a
             >
           </li>
         </ul>
@@ -50,24 +50,49 @@
     </div>
 
     <!-- Shopping Cart -->
-    <div class="shopping-cart">
+    <div class="row">
       <div class="column">
-        <p class="cart-title">Shopping Cart</p>
+        <p class="product-filter-title">
+          <a href="shop.html">&#8592; Back to shop!</a>
+        </p>
+      </div>
 
-        <div>
-          <img src="images/dumpling.jpg" alt="dumpling" class="cart-image" />
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
+
+    <div class="row horizontal-line-bot pad-left">
+      <div class="column">
+        <div class="shopping-cart">
+          <p class="cart-title">Shopping Cart</p>
         </div>
+      </div>
 
-        <br />
+      <div class="column"></div>
+      <div class="column"></div>
 
+      <div class="column">
+        <div class="cart-price">
+          <p>Price</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
         <div>
-          <img src="images/brownie.jpeg" alt="brownies" class="cart-image" />
+          <img
+            src="images/cinnamonrollmain.jpg"
+            alt="cinnamon-roll"
+            class="cart-image"
+          />
         </div>
       </div>
 
       <div class="column">
         <div class="cart-description">
-          <h2>Signature Cinnamon Rolls</h2>
+          <a href="product_detail.html"><h2>Signature Cinnamon Rolls</h2></a>
           <p>Blackberry | Vanilla-milk</p>
         </div>
         <label class="quantity-label" for="itemQty1">Quantity:</label>
@@ -76,20 +101,36 @@
             class="input"
             name="quantity"
             id="itemQty1"
-            onChange="calculatePrice()"
+            onChange="calculatePrice(this.id);"
           >
             <option value="1">1</option>
             <option value="3">3</option>
             <option value="6">6</option>
-            <option value="9" selected>9</option>
             <option value="12">12</option>
-            <option value="18">18</option>
-            <option value="27">27</option>
+            <option value="27">24</option>
           </select>
         </div>
+      </div>
 
-        <div class="cart-description2">
-          <h2>Apple Dumplings</h2>
+      <div class="column">
+        <button class="instock">In Stock</button>
+      </div>
+
+      <div class="column">
+        <p class="item-price" id="item-1">$3.00</p>
+      </div>
+    </div>
+
+    <div class="row horizontal-line-bot">
+      <div class="column">
+        <div>
+          <img src="images/dumpling.jpg" alt="dumpling" class="cart-image" />
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="cart-description">
+          <a href="product_detail.html"><h2>Apple Dumplings</h2></a>
           <p>Original</p>
         </div>
         <label class="quantity-label" for="itemQty2">Quantity:</label>
@@ -98,41 +139,42 @@
             class="input"
             name="quantity"
             id="itemQty2"
-            onChange="calculatePrice()"
+            onChange="calculatePrice(this.id);"
           >
             <option value="1">1</option>
-            <option value="3" selected>3</option>
+            <option value="3">3</option>
             <option value="6">6</option>
-            <option value="9">9</option>
             <option value="12">12</option>
-            <option value="18">18</option>
-            <option value="27">27</option>
+            <option value="27">24</option>
           </select>
         </div>
       </div>
 
       <div class="column">
-        <p></p>
+        <button class="instock">In Stock</button>
       </div>
 
       <div class="column">
-        <div class="cart-price">
-          <p>Price</p>
-        </div>
-        <p class="item-price">$27.00</p>
-        <p class="item-price2">$9.00</p>
-        <p class="item-price2" id="subtotal">
-          Subtotal (2 items): <span id="subtotal-price">$36.00</span>
+        <p class="item-price" id="item-2">$3.00</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column"></div>
+
+      <div class="column"></div>
+
+      <div class="column"></div>
+
+      <div class="column">
+        <p class="item-price" id="subtotal">
+          Subtotal (2 items): <span id="subtotal-price">$6.00</span>
         </p>
       </div>
     </div>
 
-    <div class="column">
-      <p></p>
-    </div>
-
     <!-- Footer -->
-    <div class="footer">
+    <div class="footer-alt">
       <footer>
         <p>© 2020 Bun Bun Bake Shop, Inc. All rights reserved.</p>
       </footer>
