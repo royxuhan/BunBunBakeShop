@@ -76,6 +76,11 @@ hr {
   border-bottom: 2px solid #ccc;
 }
 
+.horizontal-line-top {
+  padding-top: -15px;
+  border-top: 2px solid #ccc;
+}
+
 .vertical-line-left {
   border-left: 2px solid #ccc;
 }
@@ -345,6 +350,16 @@ hr {
   border-radius: 5px;
 }
 
+.delete {
+  margin-top: 24px;
+  background-color: #d64d23;
+  color: #ffffff;
+  padding: 2px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 #original,
 #blackberry,
 #walnut,
@@ -465,6 +480,17 @@ hr {
 }
 
 .item-price {
+  margin-left: -23%;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  font-style: bold;
+  color: #bb2b2b;
+}
+
+.subtotal-price {
   margin-left: -23%;
   font-family: "Work Sans";
   font-style: normal;

@@ -4,12 +4,6 @@
 <!-- Spring 2020 --> 
 */
 
-class Product {
-  constructor(name) {
-    this.name = name;
-  }
-}
-
 // Highlight selected flavor option on product detail page
 function selectFlavorOption(id) {
   var element = document.getElementById(id);
@@ -62,19 +56,14 @@ function updateProductSelection() {
   }
 }
 
-// Calculate how much the total is based on item pricing and quantity
-function calculatePrice(id) {
+// Calculate how much the total is for cinnamon rolls
+function calculateTotal() {
   var itemPrice = 3;
-  var quantity = document.getElementById(id);
+  var quantity = document.getElementById("quantity");
   var numItems = quantity.options[quantity.selectedIndex].value;
   var total = itemPrice * numItems;
-  var item = "item-" + id.charAt(id.length - 1);
-  document.getElementById(item).innerHTML = "$" + total.toFixed(2);
-  var subtotal =
-    parseInt(document.getElementById("item-1").innerHTML.substr(1)) +
-    parseInt(document.getElementById("item-2").innerHTML.substr(1));
-  document.getElementById("subtotal-price").innerHTML =
-    "$" + subtotal.toFixed(2);
+  document.getElementById("pricing-total").innerHTML =
+    "Total: $" + total.toFixed(2);
 }
 
 // Update product image based on selection
@@ -99,10 +88,97 @@ function updateProductImage(id) {
   }
 }
 
+// Object Constructors
+function CinnamonRoll(name, quantity, flavor, glazing) {
+  this.name = name;
+  this.quantity = quantity;
+  this.flavor = flavor;
+  this.glazing = glazing;
+}
+
 // Update item count in the cart
-function updateItemCount() {
+function saveItem() {
+  var flavor = document.querySelectorAll(".flavor-selected")[0];
+  var glazing = document.querySelectorAll(".glazing-selected")[0];
+  var numCartItems = localStorage.length;
+
+  if (flavor == null) {
+    alert("Please select both a flavor for your cinnamon roll!");
+  } else if (glazing == null) {
+    alert("Please select both a glazing for your cinnamon roll!");
+  } else {
+    var flavorText = flavor.innerHTML;
+    var glazingText = glazing.innerHTML;
+    var quantity = document.getElementById("quantity");
+    var numItems = quantity.options[quantity.selectedIndex].value;
+    var toSave = "savedCinnamonRoll" + (numCartItems + 1);
+    var cinnamonRoll = new CinnamonRoll(
+      toSave,
+      numItems,
+      flavorText,
+      glazingText
+    );
+    localStorage.setItem(toSave, JSON.stringify(cinnamonRoll));
+
+    // update cart count
+    var itemCount = document.getElementById("item-count");
+    itemCount.innerHTML = numCartItems;
+    location.reload();
+    alert("Your cinnamon roll has been added to cart!");
+  }
+}
+
+function onLoad() {
+  // update cart count
   var itemCount = document.getElementById("item-count");
-  var count = itemCount.innerHTML;
-  count++;
-  itemCount.innerHTML = count;
+  var numItems = localStorage.length;
+  itemCount.innerHTML = numItems;
+}
+
+function changeQuantity(id) {
+  var quantity = document.getElementById(id);
+  var numItems = quantity.options[quantity.selectedIndex].value;
+  var total = 3 * numItems;
+  document.getElementById("item-price").innerHTML = "$" + total.toFixed(2);
+  calculateSubtotal();
+}
+
+// Calculate what the cart subtotal is
+function calculateSubtotal() {
+  var items = document.getElementsByClassName("item-price");
+  var subtotal = 0;
+  for (var i = 0; i < items.length; i++) {
+    subtotal += parseInt(items[i].innerHTML.substr(1));
+  }
+  document.getElementById("subtotal-price").innerHTML =
+    "$" + subtotal.toFixed(2);
+}
+
+// Populate page with customized cinnamon rolls
+function onLoadCartPage() {
+  var numItems = localStorage.length;
+  for (var i = 0; i < numItems; i++) {
+    var temp = document.getElementsByTagName("template")[0];
+    var clon = temp.content.cloneNode(true);
+    var currItem = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    clon.getElementById("user-selection").innerHTML =
+      currItem.flavor + " | " + currItem.glazing;
+    clon.getElementById("itemQty").selectedIndex = currItem.quantity / 3;
+    var itemTotal = currItem.quantity * 3;
+    clon.getElementById("item-price").innerHTML = "$" + itemTotal.toFixed(2);
+    clon.getElementById("template").setAttribute("id", currItem.name);
+    var deleteButtonID = currItem.name + "Delete";
+    clon.getElementById("delete-button").setAttribute("id", deleteButtonID);
+    var subtotalDivider = document.getElementById("subtotal-divider");
+    subtotalDivider.parentNode.insertBefore(clon, subtotalDivider);
+  }
+  calculateSubtotal();
+}
+
+function removeItem(id) {
+  console.log(rowID);
+  var rowID = id.substr(0, id.indexOf("Delete"));
+  var row = document.getElementById(rowID);
+  row.parentNode.removeChild(row);
+  calculateSubtotal();
 }

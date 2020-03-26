@@ -23,7 +23,7 @@
     <script src="assets/js/main.js"></script>
   </head>
 
-  <body>
+  <body onload="onLoad()">
     <!-- Navbar -->
     <div class="container">
       <!-- Logo on top left -->
@@ -156,24 +156,22 @@
           <br />
           <label for="quantity">Quantity:</label>
 
-          <select name="quantity" id="quantity" onChange="calculatePrice()">
+          <select name="quantity" id="quantity" onChange="calculateTotal()">
             <option value="1">1</option>
             <option value="3">3</option>
             <option value="6">6</option>
             <option value="9">9</option>
             <option value="12">12</option>
+            <option value="15">15</option>
             <option value="18">18</option>
-            <option value="27">27</option>
+            <option value="21">21</option>
+            <option value="24">24</option>
           </select>
 
           <p id="pricing-total">Total: $3.00</p>
 
           <form class="pad-top">
-            <button
-              class="addtocart"
-              type="button"
-              onclick="updateItemCount();"
-            >
+            <button class="addtocart" type="button" onclick="saveItem();">
               <b>Add to Cart</b>
             </button>
           </form>
