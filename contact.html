@@ -23,7 +23,7 @@
     <script src="assets/js/main.js"></script>
   </head>
 
-  <body>
+  <body onload="onLoad();">
     <!-- Navbar -->
     <div class="container">
       <!-- Logo on top left -->
@@ -42,7 +42,7 @@
           <li>
             <a href="shoppingcart.html" id="cart"
               ><i class="fa fa-shopping-cart"></i>
-              <span class="item-count">0</span></a
+              <span class="item-count" id="item-count">0</span></a
             >
           </li>
         </ul>
