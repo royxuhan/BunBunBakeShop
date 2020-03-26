@@ -89,18 +89,18 @@
       <div class="column">
         <div class="cart-description">
           <a href="product_detail.html"><h2>Apple Dumplings</h2></a>
-          <p>Original</p>
+          <p>Maple Apple | Crunchy</p>
         </div>
-        <label class="quantity-label" for="itemQty2">Quantity:</label>
+        <label class="quantity-label" for="dumplingPrice">Quantity:</label>
         <div class="add-qty">
           <select
             class="input"
             name="quantity"
-            id="itemQty"
-            onChange="calculateSubtotal();"
+            id="dumplingPrice"
+            onChange="changeQuantity(this.id);"
           >
-            <option value="1">1</option>
-            <option value="3" selected>3</option>
+            <option value="1" selected>1</option>
+            <option value="3">3</option>
             <option value="6">6</option>
             <option value="12">12</option>
             <option value="24">24</option>
@@ -122,7 +122,7 @@
       </div>
 
       <div class="column">
-        <p class="item-price" id="item-2">$3.00</p>
+        <p class="item-price" id="dumplingPriceChange">$3.00</p>
       </div>
     </div>
 
@@ -178,7 +178,7 @@
         </div>
 
         <div class="column">
-          <p class="item-price" id="item-price">$3.00</p>
+          <p class="item-price" id="itemQtyChange">$3.00</p>
         </div>
       </div>
     </template>

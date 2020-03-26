@@ -135,11 +135,15 @@ function onLoad() {
   itemCount.innerHTML = numItems;
 }
 
+// Recalculate item price based on changed quantity
 function changeQuantity(id) {
+  console.log(id);
   var quantity = document.getElementById(id);
   var numItems = quantity.options[quantity.selectedIndex].value;
   var total = 3 * numItems;
-  document.getElementById("item-price").innerHTML = "$" + total.toFixed(2);
+  var newID = id + "Change";
+  console.log(newID);
+  document.getElementById(newID).innerHTML = "$" + total.toFixed(2);
   calculateSubtotal();
 }
 
@@ -165,7 +169,13 @@ function onLoadCartPage() {
       currItem.flavor + " | " + currItem.glazing;
     clon.getElementById("itemQty").selectedIndex = currItem.quantity / 3;
     var itemTotal = currItem.quantity * 3;
-    clon.getElementById("item-price").innerHTML = "$" + itemTotal.toFixed(2);
+    clon.getElementById("itemQtyChange").innerHTML = "$" + itemTotal.toFixed(2);
+    var itemPriceSpecific = currItem.name + "Price";
+    clon.getElementById("itemQty").setAttribute("id", itemPriceSpecific);
+    var itemPriceSpecificChange = itemPriceSpecific + "Change";
+    clon
+      .getElementById("itemQtyChange")
+      .setAttribute("id", itemPriceSpecificChange);
     clon.getElementById("template").setAttribute("id", currItem.name);
     var deleteButtonID = currItem.name + "Delete";
     clon.getElementById("delete-button").setAttribute("id", deleteButtonID);
@@ -176,9 +186,9 @@ function onLoadCartPage() {
 }
 
 function removeItem(id) {
-  console.log(rowID);
   var rowID = id.substr(0, id.indexOf("Delete"));
   var row = document.getElementById(rowID);
   row.parentNode.removeChild(row);
+  localStorage.removeItem(rowID);
   calculateSubtotal();
 }
