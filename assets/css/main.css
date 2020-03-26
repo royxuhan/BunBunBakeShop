@@ -37,26 +37,6 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.column {
-  position: relative;
-  width: 100%;
-  padding: 0 15px 0 15px;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
-}
-
 .bottom {
   position: absolute;
   bottom: 15px;
@@ -92,6 +72,27 @@ hr {
 
 .pad-left {
   padding-left: 20px;
+}
+
+/* Inspired by Bootstrap */
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.column {
+  position: relative;
+  width: 100%;
+  padding: 0 15px 0 15px;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 /* index page */
