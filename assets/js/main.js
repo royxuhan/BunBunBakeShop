@@ -137,12 +137,10 @@ function onLoad() {
 
 // Recalculate item price based on changed quantity
 function changeQuantity(id) {
-  console.log(id);
   var quantity = document.getElementById(id);
   var numItems = quantity.options[quantity.selectedIndex].value;
   var total = 3 * numItems;
   var newID = id + "Change";
-  console.log(newID);
   document.getElementById(newID).innerHTML = "$" + total.toFixed(2);
   calculateSubtotal();
 }
@@ -167,6 +165,22 @@ function onLoadCartPage() {
     var currItem = JSON.parse(localStorage.getItem(localStorage.key(i)));
     clon.getElementById("user-selection").innerHTML =
       currItem.flavor + " | " + currItem.glazing;
+    if (currItem.flavor.includes("Blackberry")) {
+      clon.getElementById("selected-image").src =
+        "images/cinnamon-blackberry.jpg";
+    } else if (currItem.flavor.includes("Walnut")) {
+      clon.getElementById("selected-image").src = "images/cinnamon-walnut.jpg";
+    } else if (currItem.flavor.includes("Pumpkin Spice")) {
+      clon.getElementById("selected-image").src =
+        "images/cinnamon-pumpkinspice.jpg";
+    } else if (currItem.flavor.includes("caramel")) {
+      clon.getElementById("selected-image").src = "images/cinnamon-caramel.jpg";
+    } else if (currItem.flavor.includes("Original")) {
+      clon.getElementById("selected-image").src = "images/cinnamonrollmain.jpg";
+    } else if (currItem.flavor.includes("Original (GF)")) {
+      clon.getElementById("selected-image").src = "images/cinnamonroll2.png";
+    }
+
     clon.getElementById("itemQty").selectedIndex = currItem.quantity / 3;
     var itemTotal = currItem.quantity * 3;
     clon.getElementById("itemQtyChange").innerHTML = "$" + itemTotal.toFixed(2);
